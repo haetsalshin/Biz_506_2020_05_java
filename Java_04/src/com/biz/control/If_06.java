@@ -19,11 +19,13 @@ public class If_06 {
 		System.out.println("평균 : " + avg);
 		
 		// 평균이 60점 이상이면 합격 아니면 불합격
-		if(avg >= 60) {
+		if(avg >= 60 && intKor > 60) {
 			System.out.println("합격");
 		} else {
 			System.out.println("불합격");
 		}
+		
+		
 		
 	}
 
