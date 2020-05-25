@@ -7,16 +7,9 @@ public class Var_05 {
 	public static void main(String[] args) {
 		
 		Random rnd = new Random();
-		int num1 = rnd.nextInt((100) +1);
-		int num2 = rnd.nextInt((100) +1);
+		int num1 = rnd.nextInt((50) +50);
+		int num2 = rnd.nextInt((50) +51);
 		
-		if(num1 >50) {
-			System.out.println(num1);
-		}
-		
-		if(num2 >50) {
-			System.out.println(num2);
-		}
 		
 	}
 
