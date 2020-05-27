@@ -17,6 +17,10 @@ public class Char_02 {
 		}
 		System.out.println("한글 글자 개수:"+intCount);
 		
+		
+		
+		
+		
 	}
 
 }
