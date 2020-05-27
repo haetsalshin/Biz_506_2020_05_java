@@ -12,29 +12,19 @@ public class Grade_14 {
 		for(int i = 0 ; i < 6 ; i++) {
 			
 			int intNum = rnd.nextInt(45)+1;
-			
 			int index =0;
 			for(index = 0 ; index < 6 ; index++) {
 				if(intNums[i] == intNum) {
 					break;
 				}
-				
-				
 			}
 			if(index == 6) {
 				intNums[i] = intNum;
-				
 			}
-			
-			
 		}
-		
 		for(int i = 0 ; i < 6 ; i ++) {
 			System.out.println(intNums[i]);
 		}
-		
-		
-		
 		
 	}
 
