@@ -13,8 +13,8 @@ public class Array_06 {
 		// Random 클래스의 생성자(new Random)
 		Random rnd = new Random();
 		
-		// (rnd)인스턴스(instance), 객체(Object) : Random 클래스로 만든 rnd 변수
-		// .nextInt(100) : Radnom클래스 method라고 부른다.
+		// (rnd)인스턴스(instance), 객체(Object) : Random 클래스로 만든 rnd 변수 
+		// .nextInt(100) : Random클래스 method라고 부른다.
 		// rnd 객체의 nectInt() 메서드를 실행하라 라고 한다.
 		// rnd 객체의 nextInt() 메서드를 호출하라 라고도 한다.
 		rnd.nextInt(100);
@@ -23,7 +23,7 @@ public class Array_06 {
 		String strM = new String(); // strM인스턴스, strM객체 라고 부른다.
 		
 		for (int i = 0; i < 100; i++) {
-			// rnd 객체의 nectInt() 메서드를 실행하여(호출하여)
+			// rnd 객체의 nextInt() 메서드를 실행하여(호출하여)
 			// 결과값을 배열 intNum의 i 번째 위치에 저장(할당, 보관)하라
 			intNum[i] = rnd.nextInt(100) + 1;
 		}
