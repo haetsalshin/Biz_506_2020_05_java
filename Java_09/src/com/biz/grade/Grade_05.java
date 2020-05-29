@@ -16,7 +16,7 @@ public class Grade_05 {
 		System.out.println(sum);
 		// for 반복문 이전에 이미 sum객체를 선언을 했기 때문에 for문이 끝나도 객체sum 값은 출력이 된다.
 		// 또한 for반복문에서 i가 10에서 1000000번까지 늘어나도 sum 객체 값은 100으로 할당 되기 때문에
-		// for 반복문이 끝나도 최종적으로 선언 된 값 100이 출력된다.
+		// for 반복문이 끝나도 최종적으로 할당 된 값 100이 출력된다.
 		
 		for(int i =0 ; i < 10 ; i++) {
 			System.out.println(sum);
