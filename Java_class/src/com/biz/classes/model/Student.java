@@ -11,7 +11,7 @@ public class Student {
 	private String addr;
 	public int grade;
 	
-	String rem;
+	public String rem;
 	
 	// 임의로 생성한 method
 	// setName() method라고 칭한다.

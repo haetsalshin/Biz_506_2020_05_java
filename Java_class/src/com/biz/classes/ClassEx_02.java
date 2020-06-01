@@ -24,6 +24,8 @@ public class ClassEx_02 {
 		
 		// 클래스에 선언된 멤버변수에 저장된 값을 읽기
 		System.out.println(student.name);
+		student.name = "신햇살";
+		System.out.println(student.name);
 		
 		// 멤버변수에 public 키워드가 있으면
 		// 인스턴스를 통해서 변수에 값을 저장 하거나 값을 읽을 수 있다.
@@ -34,7 +36,7 @@ public class ClassEx_02 {
 		// public으로 인식 되기도 하고, private로 인식 되기도 한다.
 		// 서로 다른 package에서는 private로 인식된다.
 		student.rem = "접근제한자 없음";
-		
+		System.out.println(student.rem);
 		
 		
 	}
