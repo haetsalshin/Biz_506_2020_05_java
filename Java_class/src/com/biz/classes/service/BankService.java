@@ -6,6 +6,15 @@ public class BankService {
 	
 	public void bankList(BankVO[] bankList) {
 		
+		LineService lineService = new LineService();
+		String d_line = lineService.do_line(50);
+		String s_line = lineService.single(50);
+		
+		System.out.println(d_line);
+		System.out.println("은행출금내역");
+		System.out.println(s_line);
+		System.out.println("계좌번호\t 날짜\t 입금\t 출금\t 잔액");
+		
 		
 		for(int i = 0; i < bankList.length; i++) {
 			
