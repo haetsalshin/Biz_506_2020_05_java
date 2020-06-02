@@ -35,7 +35,7 @@ public class BookService {
 	
 	
 	public void bookInfo(BookVO book) {
-		System.out.printf("ISBN : %s \n", book.title);
+		System.out.printf("ISBN : %s \n", book.isbn);
 		System.out.printf("도서명 : %s \n", book.title);
 		System.out.printf("저자 : %s \n", book.auth);
 		System.out.printf("출판사 : %s \n", book.comp);

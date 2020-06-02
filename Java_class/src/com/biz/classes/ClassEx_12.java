@@ -33,7 +33,8 @@ public class ClassEx_12 {
 			bankList[4].setIntValance(7000);
 		}
 		
-		BankService bankService = new BankService();
+		BankService bankInfo = new BankService();
+		
 		
 
 	
