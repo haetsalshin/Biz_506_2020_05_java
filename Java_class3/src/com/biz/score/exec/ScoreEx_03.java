@@ -33,7 +33,7 @@ public class ScoreEx_03 {
 		// 그때 마다 size 1씩 증가하는 리스트로 변경된다.
 		str1.add("대한민국"); // 대한민국이라는 문자열 주입. 이 열을 통화하는 순간 size가 1이된다.
 		str1.add("우리나라"); // 우리나라 라는 문자열 주입. 이 열을 통화하는 순간 size 2
-		str1.add("Republic of Korea"); // republic of Korea 라는 문자열 주입. 이 열ㅇ르 통화하는 순간 size 3.
+		str1.add("Republic of Korea"); // republic of Korea 라는 문자열 주입. 이 열을 통화하는 순간 size 3.
 		str1.add(""+90);			   // 정수인 90을 넣고 싶다면 String 형으로 바꾼 후에 저장~                 
 		    						   // 내가 원하면 언제든지 add를 통해서 추가 할 수 있다.
 		System.out.println(str1);
