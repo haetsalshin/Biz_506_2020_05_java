@@ -6,11 +6,43 @@ import com.biz.list.model.ScoreVO;
 
 public class ScoreServiceV2 {
 	
+	// 선생님 과목별 평균하고 총합 구하는 곳에 점수가 출력 안되는 이유를 못찾겠어요...
+	
+	public void stSum(List<ScoreVO> scoreList) {
+		int scoreSize = scoreList.size();
+		for(int i =0; i < scoreSize ; i++ 	) {
+			ScoreVO sVOVO = scoreList.get(i);
+			
+			int sum = sVOVO.getKor();
+			sum += sVOVO.getEng();
+			sum += sVOVO.getMath();
+			sum = sVOVO.getStSum();
+			
+		}
+
+	}
+	
+	public void stAvg(List<ScoreVO> scoreList) {
+		int scoreSize = scoreList.size();
+		for(int i = 0; i < scoreSize ; i ++) {
+			
+			ScoreVO sAvg = scoreList.get(i);
+			
+			int avg = sAvg.getStSum()/scoreSize;
+			
+			avg = sAvg.getStAvg();
+			
+			
+		}
+		
+	}
+	
+	
 	
 	// 학생별 총점 및 평균 method만들기 
 	// stSum 이름 바꾸기!
 	
-	public void stSum(List<ScoreVO> scoreList) {
+	public void studentSum(List<ScoreVO> scoreList) {
 		
 		int korSum =0;
 		int engSum =0;

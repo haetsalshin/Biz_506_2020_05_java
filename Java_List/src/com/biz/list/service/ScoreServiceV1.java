@@ -23,12 +23,9 @@ public class ScoreServiceV1 {
 			System.out.print( sVO.getKor() + "\t" );
 			System.out.print( sVO.getEng() + "\t" );
 			System.out.print( sVO.getMath() + "\t" );
+			System.out.print( sVO.getStSum() + "\t" );
+			System.out.print( sVO.getStAvg() + "\n" );
 			
-			int sum = sVO.getKor();
-			sum += sVO.getEng();
-			sum += sVO.getMath();
-			
-			System.out.printf("%d\t%d\n",sum,sum/3);
 			
 			
 		}

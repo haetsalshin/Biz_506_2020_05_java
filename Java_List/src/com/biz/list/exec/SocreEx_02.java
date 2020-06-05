@@ -34,7 +34,10 @@ public class SocreEx_02 {
 		sService.scoreList(scoreList);
 		
 		ScoreServiceV2 sServiceV2 = new ScoreServiceV2();
+		sServiceV2.studentSum(scoreList);
 		sServiceV2.stSum(scoreList);
+		sServiceV2.stAvg(scoreList);
+		
 		
 		
 		
