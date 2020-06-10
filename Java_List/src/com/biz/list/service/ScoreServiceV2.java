@@ -10,13 +10,18 @@ public class ScoreServiceV2 {
 	
 	public void stSum(List<ScoreVO> scoreList) {
 		int scoreSize = scoreList.size();
+		int sum =0;
 		for(int i =0; i < scoreSize ; i++ 	) {
 			ScoreVO sVOVO = scoreList.get(i);
 			
-			int sum = sVOVO.getKor();
+			sum = sVOVO.getKor();
 			sum += sVOVO.getEng();
 			sum += sVOVO.getMath();
-			sum = sVOVO.getStSum();
+
+			sVOVO.setStSum(sum);
+			
+			System.out.println(sVOVO.getStSum());
+			
 			
 		}
 
@@ -24,13 +29,17 @@ public class ScoreServiceV2 {
 	
 	public void stAvg(List<ScoreVO> scoreList) {
 		int scoreSize = scoreList.size();
+		int avg =0;
 		for(int i = 0; i < scoreSize ; i ++) {
 			
 			ScoreVO sAvg = scoreList.get(i);
 			
-			int avg = sAvg.getStSum()/scoreSize;
+			avg = sAvg.getStSum()/scoreSize;
 			
-			avg = sAvg.getStAvg();
+			sAvg.setStAvg(avg);
+			
+			System.out.println(sAvg.getStAvg());
+			
 			
 			
 		}

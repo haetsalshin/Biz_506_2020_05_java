@@ -26,6 +26,7 @@ public class SocreEx_02 {
 			scoreVO.setEng(rnd.nextInt(50)+51);
 			scoreVO.setMath(rnd.nextInt(50)+51);
 			
+			
 			// 리스트에 추가
 			scoreList.add(scoreVO); 
 			
