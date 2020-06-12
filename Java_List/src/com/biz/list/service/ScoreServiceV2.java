@@ -6,46 +6,65 @@ import com.biz.list.model.ScoreVO;
 
 public class ScoreServiceV2 {
 	
-	// 선생님 과목별 평균하고 총합 구하는 곳에 점수가 출력 안되는 이유를 못찾겠어요...
+	List<ScoreVO> scoreList ;
 	
 	public void stSum(List<ScoreVO> scoreList) {
+		
+		this.scoreList = scoreList;
+		
+		
 		int scoreSize = scoreList.size();
-		int sum =0;
-		for(int i =0; i < scoreSize ; i++ 	) {
-			ScoreVO sVOVO = scoreList.get(i);
-			
-			sum = sVOVO.getKor();
-			sum += sVOVO.getEng();
-			sum += sVOVO.getMath();
 
-			sVOVO.setStSum(sum);
+		for(int i =0; i < scoreSize ; i++ 	) {
+			ScoreVO scoreVO = scoreList.get(i);
 			
-			System.out.println(sVOVO.getStSum());
-			
+			int sum = scoreVO.getKor();
+			sum += scoreVO.getEng();
+			sum += scoreVO.getMath();
+			scoreVO.setStSum(sum);
+
 			
 		}
 
 	}
 	
 	public void stAvg(List<ScoreVO> scoreList) {
+		
+		
 		int scoreSize = scoreList.size();
-		int avg =0;
+
 		for(int i = 0; i < scoreSize ; i ++) {
 			
-			ScoreVO sAvg = scoreList.get(i);
-			
-			avg = sAvg.getStSum()/scoreSize;
-			
-			sAvg.setStAvg(avg);
-			
-			System.out.println(sAvg.getStAvg());
-			
-			
+			ScoreVO scoreVO = scoreList.get(i);
+			int sum = scoreVO.getStSum();
+			scoreVO.setStAvg(sum/3);
 			
 		}
 		
 	}
 	
+public void scoreList(List<ScoreVO> scores) {
+		
+		System.out.println("==============================================");
+		System.out.println("성적리스트");
+		System.out.println("----------------------------------------------");
+		System.out.println("학번\t국어\t영어\t수학\t총점\t평균");
+	
+		int scoreSize = scores.size();
+		for(int i = 0 ; i < scoreSize ; i++) {
+			ScoreVO sVO = scores.get(i);
+			System.out.print( sVO.getNum()+ "\t");
+			System.out.print( sVO.getKor() + "\t" );
+			System.out.print( sVO.getEng() + "\t" );
+			System.out.print( sVO.getMath() + "\t" );
+			System.out.print( sVO.getStSum() + "\t" );
+			System.out.print( sVO.getStAvg() + "\n" );
+			
+			
+			
+		}
+		System.out.println("==============================================");
+	}
 	
 	
 	// 학생별 총점 및 평균 method만들기 

@@ -9,7 +9,7 @@ public class ScoreServiceV1 {
 	 * ScoreEx_02 에서 만든 scoreList를 매개변수로 받아서
 	 * 성적 리스트를 출력한다.
 	 */
-	public void scoreList(List<ScoreVO> scores) {
+public void scoreList(List<ScoreVO> scores) {
 		
 		System.out.println("==============================================");
 		System.out.println("성적리스트");
@@ -31,6 +31,10 @@ public class ScoreServiceV1 {
 		}
 		System.out.println("==============================================");
 	}
+	
+
+	
+	
 	
 
 }

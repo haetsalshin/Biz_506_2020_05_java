@@ -21,7 +21,7 @@ public class SocreEx_02 {
 			scoreVO = new ScoreVO(); 
 			
 			// (필드변수) 값을 세팅하고
-			scoreVO.setNum(""+i);
+			scoreVO.setNum(""+(i+1));
 			scoreVO.setKor(rnd.nextInt(50)+51);
 			scoreVO.setEng(rnd.nextInt(50)+51);
 			scoreVO.setMath(rnd.nextInt(50)+51);
@@ -31,14 +31,15 @@ public class SocreEx_02 {
 			scoreList.add(scoreVO); 
 			
 		}
-		ScoreServiceV1 sService = new ScoreServiceV1();
-		sService.scoreList(scoreList);
+		//ScoreServiceV1 sService = new ScoreServiceV1();
+		//sService.scoreList(scoreList);
 		
 		ScoreServiceV2 sServiceV2 = new ScoreServiceV2();
-		sServiceV2.studentSum(scoreList);
+
 		sServiceV2.stSum(scoreList);
 		sServiceV2.stAvg(scoreList);
-		
+		sServiceV2.scoreList(scoreList);
+		sServiceV2.studentSum(scoreList);		
 		
 		
 		
