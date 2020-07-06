@@ -1,0 +1,53 @@
+package com.biz.student.exec;
+
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.util.Random;
+/*
+ * 학번, 국어, 영어, 수학, 총점, 평균 데이터를 생성하여
+ * 엑셀에서 열어서 사용할 수 있도록 파일을 작성
+ * 엑셀은 xls, xlsx파일 외에 *.csv라는 파일을 읽어서 엑셀 데이터처럼 취급할 수 있는데
+ * 
+ * *.csv 파일은 ,로 데이터들을 구분하는 문자열로 만들고 
+ * 그 내용을 text형식으로 저장하면 된다.
+ */
+public class ScoreEx_01 {
+	public static void main(String[] args) {
+		
+		PrintStream outPut = System.out;
+		
+		// csv = > ,로 값을 구분해서 저장하는 파일.
+		// 내가 만든 파일을 엑셀 데이트로 만들고 싶다 하면 이런식으로 데이터를 저장하면 된다!(나중에 그래프를 그린다던가~)
+		String outFile = "src/com/biz/student/exec/score.csv";
+		
+		// 지금부터 outFile 변수에 저장된 파일이름으로
+		// text를 기록하기 위해 파일을 만들어라.
+		try {
+			outPut = new PrintStream(outFile);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Random rnd = new Random();
+		
+		for(int i = 0 ; i < 30 ; i ++) {
+			
+			int intKor = rnd.nextInt(50)+51;
+			int intEng = rnd.nextInt(50)+51;
+			int intMath = rnd.nextInt(50)+51;
+			
+			int intSum = intKor + intEng + intMath;
+			int intAvg = intSum/3;
+			// System.out.printf()
+			// 콘솔에 보여주는게 아니라 출력문을 변수의 문자열 형태로 저장하는 것.
+			String score = String.format("%d,%d,%d,%d,%d,%d",
+					i+1, intKor, intEng, intMath, intSum, intAvg);
+			
+			
+			outPut.println(score);
+		}
+		outPut.close();
+		System.out.println("완료!!!!!:)");
+	}
+
+}
