@@ -38,6 +38,14 @@ public class BankServiceImplV3 extends BankServiceImplV2 {
 		FileReader fileReader = null;
 		BufferedReader buffer = null;
 		
+		
+		// 새로운 계좌번호를 선택했을 때
+		// 새로운 balance정보를 가져오기 위해서
+		// 기존의 accList를 모두 제거하기
+		// 기존 List를 제거하지 않으면 계좌를 선택할 때마다
+		// 리스트가 추가되어 나타나게 된다.			
+		accList.clear();
+		
 		try {
 			fileReader = new FileReader(bFileName);
 			buffer = new BufferedReader(fileReader);
