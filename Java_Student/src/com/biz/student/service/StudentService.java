@@ -1,4 +1,9 @@
 package com.biz.student.service;
+
+import java.util.List;
+
+import com.biz.student.domain.StudentVO;
+
 /*
  * Service
  * Business Login
@@ -20,5 +25,6 @@ public interface StudentService {
 	 */
 	public boolean inputStudent();
 	public void studentList();
+	public List<StudentVO> getStudentList();
 
 }

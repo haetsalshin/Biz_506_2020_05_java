@@ -10,7 +10,7 @@ public class Lines {
 	 *  설정하고 싶을 때 사용하는 static 생성자
 	 */
 	static {
-		for(int i = 0 ; i < 100 ; i ++) {
+		for(int i = 0 ; i < 120 ; i ++) {
 			dLine += "="; //========
 			sLine += "-"; //--------
 			

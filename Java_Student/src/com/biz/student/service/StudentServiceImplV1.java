@@ -50,15 +50,16 @@ public class StudentServiceImplV1 implements StudentService {
 	// 클래스를 객체로 생성할 때 1번 호출되는 method로 반드시 생성(초기화)가 필요한
 	// 필드변수들을 여기에 생성하는 코드를 작성한다.
 	public StudentServiceImplV1() {
-		studentList = new ArrayList<StudentVO>();
-		
-		
+		//studentList = new ArrayList<StudentVO>();
+		StudentService stService = new StudentServiceImplV5();
+		studentList = stService.getStudentList();
 	}
 	
 
 	@Override
 	public boolean inputStudent() {
-		Scanner scan = new Scanner(System.in);
+		
+		/*Scanner scan = new Scanner(System.in);
 		StudentVO studentVO = new StudentVO();
 		
 		System.out.print("학번을 입력하세요 (입력종료:END) >> ");
@@ -112,7 +113,10 @@ public class StudentServiceImplV1 implements StudentService {
 		// 제일 끝의 return문은 한 학생의 정보가 모두 정상입력이 되면 
 		// true를 return하여 다음 학생의 정보를 입력하도록 
 		// 호출한 곳에 통보(return)해야 하는데 이 때 true를 return 하도록 해야한다.
+		 * 
+		 */
 		return true;
+		
 	}
 
 	@Override
@@ -133,6 +137,13 @@ public class StudentServiceImplV1 implements StudentService {
 		System.out.println("▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒");
 		
 		
+	}
+
+
+	@Override
+	public List<StudentVO> getStudentList() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 

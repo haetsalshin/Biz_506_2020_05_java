@@ -180,30 +180,39 @@ public class ScoreServiceImplV1 implements ScoreService{
 		for(ScoreVO scoreVO : scoreList) {
 			// 이름
 			// score의 학번으로 studentLlist에서 찾기
+			boolean stdCheck = false;
 			for(StudentVO studentVO : studentList) {
 				
 				if(studentVO.getNum().equals(scoreVO.getNum())) {
-
+					
 					outPut.print(scoreVO.getNum()+"\t");
 					System.out.print(studentVO.getName()+ "\t") ;
-					outPut.print(scoreVO.getIntKor()+"\t");
-					outPut.print(scoreVO.getIntEng()+"\t");
-					outPut.print(scoreVO.getIntMath()+"\t");
-					outPut.print(scoreVO.getIntSum()+"\t");
-					
-					outPut.printf("%5.2f\n", scoreVO.getIntAvg());;
 
+					stdCheck = true;
+					break;
 				}
-
+				}
+				// stdCheck == true : 학생을 찾았음, false:학생 없음
+				if(!stdCheck) {
+					System.out.println("[없음]"+"\t");
+				}
+				
+				outPut.print(scoreVO.getIntKor()+"\t");
+				outPut.print(scoreVO.getIntEng()+"\t");
+				outPut.print(scoreVO.getIntMath()+"\t");
+				outPut.print(scoreVO.getIntSum()+"\t");
+				outPut.printf("%5.2f\n", scoreVO.getIntAvg());;
+				
+		
 
 			}
+		outPut.println("==========================================================");
+				
+		}
+		
 
-			
-		}outPut.println("==========================================================");
 		
-		
-		
-	}
 	
+
 
 }
